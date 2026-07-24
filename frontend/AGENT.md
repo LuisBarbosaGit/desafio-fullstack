@@ -8,11 +8,11 @@ React 19, TypeScript, Vite, Tailwind 4, shadcn/ui (new-york), TanStack Query, Zu
 
 **Todo componente pertence à sua feature ou a `shared`. Não há terceira opção.**
 
-| Onde | O quê |
-|------|--------|
-| `features/<feature>/components/` | UI usada só (ou principalmente) por aquela feature |
-| `shared/components/` | UI reutilizada por 2+ features (layout, StatCard, ThemeToggle) |
-| `shared/components/ui/` | Primitives shadcn |
+| Onde                             | O quê                                                          |
+| -------------------------------- | -------------------------------------------------------------- |
+| `features/<feature>/components/` | UI usada só (ou principalmente) por aquela feature             |
+| `shared/components/`             | UI reutilizada por 2+ features (layout, StatCard, ThemeToggle) |
+| `shared/components/ui/`          | Primitives shadcn                                              |
 
 Regras:
 
@@ -65,7 +65,7 @@ Testes ficam em `src/test/feature/<feature>/`, espelhando a ownership da feature
 
 - **Fonte de verdade de cores:** [`src/index.css`](src/index.css) (`:root` e `.dark`, oklch verde ~145–155).
 - **Tokens TS:** [`src/shared/design-token/`](src/shared/design-token/) — usar em charts/docs; preferir classes Tailwind (`bg-primary`, `text-muted-foreground`) no JSX.
-- **Fontes:** DM Sans (corpo), Syne (display / títulos de marca).
+- **Fontes:** Plus Jakarta Sans (corpo e títulos).
 - **Radius:** `--radius: 0.875rem`; cards e inputs com `rounded-xl`.
 - **Superfícies autenticadas:** `auth-shell` + `auth-grid` para fundo; cards com `border-border/70 bg-card/80 backdrop-blur-xl`.
 - **Modo claro é padrão;** respeitar `.dark` via `themeStore`.
